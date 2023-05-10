@@ -6,7 +6,7 @@ function Home() {
   const [phone, setPhone] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/')
+    fetch('https://backend-9yvc.onrender.com/')
       .then(res => res.json())
       .then(data => {
         const randomIndex = Math.floor(Math.random() * data.length);
@@ -18,7 +18,7 @@ function Home() {
   const [show, setShow] = useState(false)
   const handleTestClick = () => {
     setShow(true)
-    fetch('http://localhost:5000/')
+    fetch('https://backend-9yvc.onrender.com/')
       .then(res => res.json())
       .then(data => {
         const randomIndex = Math.floor(Math.random() * data.length);
