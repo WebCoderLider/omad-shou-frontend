@@ -5,7 +5,7 @@ function Admin() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://backend-9yvc.onrender.com/')
             .then(res => res.json())
             .then(data => setData(data))
             .catch(err => console.log(err))
@@ -14,7 +14,7 @@ function Admin() {
     const inp = useRef()
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch('http://localhost:5000/', {
+        fetch('https://backend-9yvc.onrender.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ function Admin() {
     }
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/${id}`, {
+        fetch(`https://backend-9yvc.onrender.com/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
